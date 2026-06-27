@@ -1,0 +1,38 @@
+body{
+    margin:0;
+    background: #f5f5f5;
+    
+}
+.scroll-container{
+    display: flex;
+    gap: 30;
+    overflow-x: auto;
+    padding: 40px;
+    scroll-behavior :smooth;
+
+}
+.scroll-container ::-webkit-scrollbar {
+    height:8px;
+
+
+}
+.scroll-container ::-webkit-scrollbar-thumb {
+   
+    background : #6c63ff;
+    border-radius: 10px;
+
+
+
+
+
+}
+.scroll-container ::-webkit-scrollbar-thumb {
+   
+    background : #6c63ff;
+    border-radius: 10px;
+    
+
+
+
+
+}
