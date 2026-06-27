@@ -1,28 +1,28 @@
-import "../style/UserCard.css"
+import "../style/UserCard.css";
 
-const UserCard = ({user}) => {
- return (
+const UserCard = ({ user }) => {
+  return (
     <div className="user-card">
-        <div className="card-header">
-            <div className="profile-section">
-                <img className="image" src = {user?.image} alt={user?.firstName}/>
-            </div>
+      <div className="card-header">
+        <div className="profile-section">
+            
+          <img src={user?.image} alt={user?.firstName} />
+        </div>
+      </div>
 
-        </div>
-        <div className="card-body">
-                 <h2 className="">
-           {user.firstName + user.lastName} 
+      <div className="card-body">
+        <h2>
+          {user.firstName} {user.lastName}
         </h2>
-        <p>
-            Age: {user.age}
-        </p>
-         <p>
-            Age: {user.email}
-        </p>
-        </div>
-        
-       
+
+        <p className="age">Age {user.age}</p>
+
+        <span className="email-label">EMAIL</span>
+
+        <p className="email-text">{user.email}</p>
+      </div>
     </div>
- )
-}
-export default UserCard
+  );
+};
+
+export default UserCard;

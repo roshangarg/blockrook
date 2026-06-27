@@ -44,23 +44,22 @@ const HorizontalScroll = () => {
         } 
     }
 return (
-    <div >
-       <div className ="scroll-container" ref= {scrollReference} onScroll={handleScroll}>
-        { users.map((user) => (
-            <UserCard key= {user.id} user= {user}/>
-        ))
-        }
-        {
-            loading && <div className="loader-card" >loading... </div>
+  <div className="scroll-wrapper">
+    <div
+      className="scroll-container"
+      ref={scrollReference}
+      onScroll={handleScroll}
+    >
+      {users.map((user) => (
+        <UserCard key={user.id} user={user} />
+      ))}
 
-        }
-        {!hasMore && <h2> No More Users</h2>}
-       
-        
-        
-       </div>
+      {loading && <div className="loader-card">Loading...</div>}
+
+      {!hasMore && <div className="no-more">No More Users</div>}
     </div>
-)
+  </div>
+);
 
 }
 export default HorizontalScroll
